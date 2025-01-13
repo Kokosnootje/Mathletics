@@ -1,25 +1,52 @@
 import ScoreboardView from "./ScoreboardView.js";
 
-let playerOneScore = 0;
-let playerTwoScore = 0;
-let playerThreeScore = 0;
-let playerFourScore = 0;
-let playerFiveScore = 0;
-const root = document.querySelector("#app");
-const view = new ScoreboardView(root, "Speler 1", "Speler 2", "Speler 3", "Speler 4", "Speler 5", (player, direction) => {
-	const difference = direction === "minus" ? -1 : 1;
+let playerOneScoreR = 0;
+let playerTwoScoreR = 0;
+let playerThreeScoreR = 0;
+let playerFourScoreR = 0;
+let playerFiveScoreR = 0;
+let playerSixScoreR = 0;
 
-	if (player === "one") {
-		playerOneScore = Math.max(playerOneScore + difference, 0);
-	} else if (player === "two") {
-		playerTwoScore = Math.max(playerTwoScore + difference, 0);
-	} else if (player === "three") {
-		playerThreeScore = Math.max(playerThreeScore + difference, 0);
-	} else if (player === "four") {
-		playerFourScore = Math.max(playerFourScore + difference, 0);
-	} else if (player === "five") {
-		playerFiveScore = Math.max(playerFiveScore + difference, 0);
+let playerOneScoreG = 0;
+let playerTwoScoreG = 0;
+let playerThreeScoreG = 0;
+let playerFourScoreG = 0;
+let playerFiveScoreG = 0;
+let playerSixScoreG = 0;
+
+const root = document.querySelector("#app");
+const view = new ScoreboardView(root, "Groep 1", "Groep 2", "Groep 3", "Groep 4", "Groep 5", "Groep 6", (player, direction) => {
+	const difference = direction === "1" ? 1 : direction === "2" ? 2 : 5;
+
+	if (player === "one-r") {
+		playerOneScoreR = Math.max(playerOneScoreR + difference, 0);
+	} else if (player === "two-r") {
+		playerTwoScoreR = Math.max(playerTwoScoreR + difference, 0);
+	} else if (player === "three-r") {
+		playerThreeScoreR = Math.max(playerThreeScoreR + difference, 0);
+	} else if (player === "four-r") {
+		playerFourScoreR = Math.max(playerFourScoreR + difference, 0);
+	} else if (player === "five-r") {
+		playerFiveScoreR = Math.max(playerFiveScoreR + difference, 0);
+	} else if (player === "six-r") {
+		playerSixScoreR = Math.max(playerSixScoreR + difference, 0);
+	}
+	
+
+    if (player === "one-g") {
+		playerOneScoreG = Math.max(playerOneScoreG + difference, 0);
+	} else if (player === "two-g") {
+		playerTwoScoreG = Math.max(playerTwoScoreG + difference, 0);
+	} else if (player === "three-g") {
+		playerThreeScoreG = Math.max(playerThreeScoreG + difference, 0);
+	} else if (player === "four-g") {
+		playerFourScoreG = Math.max(playerFourScoreG + difference, 0);
+	} else if (player === "five-g") {
+		playerFiveScoreG = Math.max(playerFiveScoreG + difference, 0);
+	} else if (player === "six-g") {
+		playerSixScoreG = Math.max(playerSixScoreG + difference, 0);
 	}
 
-	view.update(playerOneScore, playerTwoScore, playerThreeScore, playerFourScore, playerFiveScore);
+
+	view.update(playerOneScoreR, playerTwoScoreR, playerThreeScoreR, playerFourScoreR, playerFiveScoreR, playerSixScoreR, playerOneScoreG, playerTwoScoreG, playerThreeScoreG, playerFourScoreG, playerFiveScoreG, playerSixScoreG);
 });
