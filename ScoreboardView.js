@@ -12,6 +12,8 @@ export default class ScoreboardView {
 				<div class="scoreboard__icon scoreboard__icon--five"><img id="icon-five" src="penguin.png" alt="bear"></div>
 				<div class="scoreboard__icon scoreboard__icon--six"><img id="icon-six" src="tiger.png" alt="bear"></div>
 			</div>
+			<br>
+			<div class="header">Sport punten</header>
 			<div class="scoreboard-r">
 				<div class="scoreboard__name scoreboard__name--one"><p contenteditable="true">${playerOneName}</p></div>
 				<div class="scoreboard__name scoreboard__name--two"><p contenteditable="true">${playerTwoName}</p></div>
@@ -111,12 +113,12 @@ export default class ScoreboardView {
 				<div class="scoreboard__name scoreboard__name--four"><p contenteditable="true">${playerFourName}</p></div>
 				<div class="scoreboard__name scoreboard__name--five"><p contenteditable="true">${playerFiveName}</p></div>
 				<div class="scoreboard__name scoreboard__name--six"><p contenteditable="true">${playerSixName}</p></div>
-				<div class="scoreboard__score-t"><progress id="one-t" value="0" max="20"></progress></div>
-				<div class="scoreboard__score-t"><progress id="two-t" value="0" max="20"></progress></div>
-				<div class="scoreboard__score-t"><progress id="three-t" value="0" max="20"></progress></div>
-				<div class="scoreboard__score-t"><progress id="four-t" value="0" max="20"></progress></div>
-				<div class="scoreboard__score-t"><progress id="five-t" value="0" max="20"></progress></div>
-				<div class="scoreboard__score-t"><progress id="six-t" value="0" max="20"></progress></div>
+				<div class="scoreboard__score-t"><progress id="one-t" value="0" max="40"></progress></div>
+				<div class="scoreboard__score-t"><progress id="two-t" value="0" max="40"></progress></div>
+				<div class="scoreboard__score-t"><progress id="three-t" value="0" max="40"></progress></div>
+				<div class="scoreboard__score-t"><progress id="four-t" value="0" max="40"></progress></div>
+				<div class="scoreboard__score-t"><progress id="five-t" value="0" max="40"></progress></div>
+				<div class="scoreboard__score-t"><progress id="six-t" value="0" max="40"></progress></div>
 				<div class="scoreboard__score-t" data-for-player="one-t">0</div>
 				<div class="scoreboard__score-t" data-for-player="two-t">0</div>
 				<div class="scoreboard__score-t" data-for-player="three-t">0</div>
