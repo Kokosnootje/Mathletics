@@ -15,8 +15,8 @@ let playerFiveScoreG = 0;
 let playerSixScoreG = 0;
 
 const root = document.querySelector("#app");
-const view = new ScoreboardView(root, "Groep 1", "Groep 2", "Groep 3", "Groep 4", "Groep 5", "Groep 6", (player, direction) => {
-	const difference = direction === "1" ? 1 : direction === "2" ? 2 : 5;
+const view = new ScoreboardView(root, "Team Beer", "Team Konijn", "Team Leeuw", "Team Giraffe", "Team Pinguin", "Team Tijger", (player, direction) => {
+	const difference = direction === "1" ? 1 : direction === "2" ? 2 : direction === "5" ? 5 : -1;
 
 	if (player === "one-r") {
 		playerOneScoreR = Math.max(playerOneScoreR + difference, 0);

@@ -28,31 +28,37 @@ export default class ScoreboardView {
 				<div class="scoreboard__score-r" data-for-player="five-r">0</div>
 				<div class="scoreboard__score-r" data-for-player="six-r">0</div>
 				<div class="scoreboard__controls-r" data-for-player="one-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
 				</div>
 				<div class="scoreboard__controls-r" data-for-player="two-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
 				</div>
 				<div class="scoreboard__controls-r" data-for-player="three-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
 				</div>
 				<div class="scoreboard__controls-r" data-for-player="four-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
 				</div>
 				<div class="scoreboard__controls-r" data-for-player="five-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
 				</div>
 				<div class="scoreboard__controls-r" data-for-player="six-r">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-r">1</button>
 					<button class="scoreboard__control-button-r">2</button>
 					<button class="scoreboard__control-button-r">5</button>
@@ -74,31 +80,37 @@ export default class ScoreboardView {
 				<div class="scoreboard__score-g" data-for-player="five-g">0</div>
 				<div class="scoreboard__score-g" data-for-player="six-g">0</div>
 				<div class="scoreboard__controls-g" data-for-player="one-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
 				</div>
 				<div class="scoreboard__controls-g" data-for-player="two-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
 				</div>
 				<div class="scoreboard__controls-g" data-for-player="three-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
 				</div>
 				<div class="scoreboard__controls-g" data-for-player="four-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
 				</div>
 				<div class="scoreboard__controls-g" data-for-player="five-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
 				</div>
 				<div class="scoreboard__controls-g" data-for-player="six-g">
+					<button class="scoreboard__control-button-g">-</button>
 					<button class="scoreboard__control-button-g">1</button>
 					<button class="scoreboard__control-button-g">2</button>
 					<button class="scoreboard__control-button-g">5</button>
@@ -130,7 +142,7 @@ export default class ScoreboardView {
 
 		this.root.querySelectorAll(".scoreboard__control-button-r").forEach(controlButton => {
 			controlButton.addEventListener("click", () => {
-				const direction = controlButton.textContent === "1" ? "1" : controlButton.textContent === "2" ? "2" : "5";
+				const direction = controlButton.textContent === "1" ? "1" : controlButton.textContent === "2" ? "2" : controlButton.textContent === "5" ? "5" : "-1";
 				const player = controlButton.closest(".scoreboard__controls-r").dataset.forPlayer;
 
 				onControlButtonClick(player, direction);
@@ -139,7 +151,7 @@ export default class ScoreboardView {
 
         this.root.querySelectorAll(".scoreboard__control-button-g").forEach(controlButton => {
 			controlButton.addEventListener("click", () => {
-				const direction = controlButton.textContent === "1" ? "1" : controlButton.textContent === "2" ? "2" : "5";
+				const direction = controlButton.textContent === "1" ? "1" : controlButton.textContent === "2" ? "2" : controlButton.textContent === "5" ? "5" : "-1";
 				const player = controlButton.closest(".scoreboard__controls-g").dataset.forPlayer;
 
 				onControlButtonClick(player, direction);
