@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <!-- Site information -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,14 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!-- Sidebar menu -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Links to other pages -->
         <a href="index.html">Scores</a>
         <a href="one.html">Trefbal</a>
-        <a href="two.html">Estafette</a>
-        <a href="three.html">Penalties</a>
+        <a href="two.html">Darten</a>
+        <a href="three.html">Vier op een rij</a>
         <a href="four.html">Hardlopen</a>
     </div>
     <script>
@@ -27,14 +30,16 @@
         }
     </script>
       
-    <!-- Use any element to open the sidenav -->
+    <!-- Opening the sidebar -->
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <!-- Main part of the page -->
     <div id="main">
-        <div id="app"></div>
+        <!-- Import the scoreboard from the JavaScript files -->
+        <div id="scoreboard"></div>
         <script src="main.js" type="module"></script>
     </div>
+    <!-- Random question generator -->
     <div class="questions">
         <button class="questionButton" onclick="newQuestion()">Willekeurige vraag!</button>
         <p id="questionText" class="questionText"></p>
@@ -91,7 +96,6 @@
                 document.getElementById("questionText").innerHTML = text;
             }
         }
-
         function getRandomInt(min, max)
         {
             const minCeiled = Math.ceil(min);
@@ -99,6 +103,8 @@
             return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
         }
     </script>
+    
+    <!-- Icon reference -->
     <a href="https://www.flaticon.com/packs/cute-face-animal-14935170" title="icons">Icons created by MEDZ - Flaticon</a>
 </body>
 </html>
